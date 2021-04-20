@@ -29,11 +29,11 @@ use App\Helpers\CardHelper;
                 </tr>
                 <tr>
                     <td>Дата создания</td>
-                    <td>{{ $payment->created_date->format('d-m-Y H:i:s') }}</td>
+                    <td>{{ $payment->payment_date ? $payment->created_date->format('d-m-Y H:i:s') : '' }}</td>
                 </tr>
                 <tr>
                     <td>Дата оплаты</td>
-                    <td>{{ $payment->payment_date->format('d-m-Y H:i:s') }}</td>
+                    <td>{{ $payment->payment_date ? $payment->payment_date->format('d-m-Y H:i:s') : '' }}</td>
                 </tr>
                 <tr>
                     <td>Телефон</td>
