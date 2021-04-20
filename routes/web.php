@@ -28,6 +28,10 @@ Route::get('/', static function () {
 });
 
 Route::get('/payments/pay/{uuid}', [PaymentController::class, 'payShow'])->name('payments.pay.show');
+
+/**
+ * Думаю лучше поменять на put(частично обновляем данные), пока оставил post запросом
+ */
 Route::post('/payments/pay/{uuid}', [PaymentController::class, 'pay'])->name('payments.pay');
 
 
